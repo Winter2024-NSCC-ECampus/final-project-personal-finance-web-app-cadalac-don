@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income & Expenses</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Let's view your income and expenses!</h1>
+
+<div style="text-align: center;">
+    <button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+<div style="text-align: center;">
+    <p>Fixed Income</p>
+</div>
+
+<div class="investment" th:each="var : ${incomeRegulars}">
+    <a class="list-group-item list-group-item-action">
+        Job Stub Number: <span th:text="${var.id}"></span> <br>
+        Job Stub Date: <span th:text="${var.date}"></span> <br>
+        Total Income: $ <span th:text="${var.income}"></span> <br>
+        General Info: <span th:text="${var.info}"></span> <br>
+    </a>
+</div>
+
+<br><br>
+<div style="text-align: center;">
+    <p>Other Income</p>
+</div>
+
+<div class="investment" th:each="var : ${incomeOthers}">
+    <a class="list-group-item list-group-item-action">
+        Job Task Number: <span th:text="${var.id}"></span> <br>
+        Job Stub Date: <span th:text="${var.date}"></span> <br>
+        Total Income: $ <span th:text="${var.income}"></span> <br>
+        General Info: <span th:text="${var.info}"></span> <br>
+    </a>
+</div>
+
+<br><br>
+<div style="text-align: center;">
+    <p>Fixed Expenses</p>
+</div>
+<div class="investment" th:each="var : ${expenseFixed}">
+    <a class="list-group-item list-group-item-action">
+        Expense ID: <span th:text="${var.id}"></span> <br>
+        Expense: $ <span th:text="${var.expense}"></span> <br>
+        Note: <span th:text="${var.note}"></span> <br>
+    </a>
+</div>
+
+<br><br>
+<div style="text-align: center;">
+    <p>Intermittent Expenses</p>
+</div>
+<div class="investment" th:each="var : ${expenseIntermittent}">
+    <a class="list-group-item list-group-item-action">
+        Expense ID: <span th:text="${var.id}"></span> <br>
+        Expense: $ <span th:text="${var.expense}"></span> <br>
+        Note: <span th:text="${var.note}"></span> <br>
+    </a>
+</div>
+
+<br><br>
+<div style="text-align: center;">
+    <p> Other Expenses</p>
+</div>
+<div class="investment" th:each="var : ${expenseOthers}">
+    <a class="list-group-item list-group-item-action">
+        Expense ID: <span th:text="${var.id}"></span> <br>
+        Expense: $ <span th:text="${var.expense}"></span> <br>
+        Note: <span th:text="${var.note}"></span> <br>
+    </a>
+</div>
+
+<div style="text-align: center;">
+<button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

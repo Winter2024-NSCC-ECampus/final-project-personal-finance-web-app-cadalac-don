@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>List of your budget!</h1>
+
+<div style="text-align: center;">
+    <p>Your current list.</p>
+</div>
+
+<div class="investment" th:each="var : ${budgetNotes}">
+    <a class="list-group-item list-group-item-action">
+        Task #: <span th:text="${var.id}"></span> <br>
+        Cost: $ <span th:text="${var.futureCost}"></span> <br>
+        Note: <span th:text="${var.futureExpense}"></span> <br>
+    </a>
+</div>
+
+<div style="text-align: center;">
+<button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

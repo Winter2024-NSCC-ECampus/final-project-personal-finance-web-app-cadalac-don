@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Modify of your other income list!</h1>
+
+<div style="text-align: center;">
+    <p>Let's add or delete!</p>
+</div>
+
+<div style="text-align: center;">
+    <form method="POST" action="/other-income">
+        <div class="form-group">
+
+            <label for="date">Date</label>
+            <input type="text" class="form-control" id="date" name="date" required aria-required="true" aria-label="date"> <br>
+
+            <label for="income">Income</label>
+            <input type="number" class="form-control" id="income" name="income" required min="1" aria-required="true" aria-label="income"> <br>
+
+            <label for="info">info</label>
+            <input type="text" class="form-control" id="info" name="info" required aria-required="true" aria-label="info"> <br>
+        </div>
+
+        <!-- Add Bootstrap classes for button styling -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<br>
+
+<div style="text-align: center;">
+    <p>Delete Logic</p>
+    <p>/other-income/{id}</p> <br>
+    <button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

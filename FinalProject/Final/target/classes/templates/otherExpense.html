@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Modify of your other expense list!</h1>
+
+<div style="text-align: center;">
+    <p>Let's add or delete!</p>
+</div>
+
+<div style="text-align: center;">
+    <form method="POST" action="/other-expense">
+        <div class="form-group">
+
+            <label for="expense">Income</label>
+            <input type="number" class="form-control" id="expense" name="expense" required min="1" aria-required="true" aria-label="expense"> <br>
+
+            <label for="note">info</label>
+            <input type="text" class="form-control" id="note" name="note" required aria-required="true" aria-label="note"> <br>
+        </div>
+
+        <!-- Add Bootstrap classes for button styling -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<br>
+
+<div style="text-align: center;">
+    <p>Delete Logic</p>
+    <p>/other-expense/{id}</p> <br>
+    <button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

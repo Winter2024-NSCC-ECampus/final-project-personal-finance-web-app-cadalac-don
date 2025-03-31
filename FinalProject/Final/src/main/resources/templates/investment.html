@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investments</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Monthly Overview of Investments</h1>
+
+<div style="text-align: center;">
+<p>Updates every 30 Days (1 Month - cycles)</p>
+</div>
+
+    <div class="investment" th:each="var : ${investments}">
+        <a class="list-group-item list-group-item-action">
+                Previous month(s) Ago: <span th:text="${var.id}"></span> <br>
+                Total Invest Worth: $ <span th:text="${var.investmentTotal}"></span> <br>
+                Investment Info: <span th:text="${var.info}"></span> <br>
+        </a>
+    </div>
+<div style="text-align: center;">
+
+<button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

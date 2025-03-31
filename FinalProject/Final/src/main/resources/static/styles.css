@@ -1,0 +1,64 @@
+.investment {
+    border: 2px solid black; /* Adjust the thickness and color of the border */
+    padding: 10px;           /* Optional: Adds space inside the div */
+    margin: 10px 0;          /* Optional: Adds space outside the div */
+}
+
+a {
+    display: block;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.btn {
+    display: inline-block; /* Make sure button and link are treated as inline-block */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.custom-btn {
+    padding: 10px 20px; /* Add padding to the link to make it look like a button */
+    border-radius: 5px; /* Optional: rounded corners */
+    text-align: center;
+}
+
+
+@media screen and (min-width: 1600px) {
+    body {
+        background-color: LightBlue;
+        margin: 0;
+        font-size: 20px; /* Larger font size for large screens */
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    body {
+        background-color: Blue;
+        margin: 0;
+        font-size: 18px; /* Slightly larger font for medium-large screens */
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width: 1199px) {
+    body {
+        background-color: lightseagreen;
+        margin: 0;
+        font-size: 17px; /* Smaller font size for medium screens */
+    }
+}
+
+@media screen and (max-width: 649px) {
+    body {
+        background-color: lightcyan;
+        margin: 0;
+        font-size: 15px; /* Smallest font size for small screens */
+    }
+}

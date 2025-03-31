@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Modify of your e-transfer list!</h1>
+
+<div style="text-align: center;">
+    <p>Let's add or delete!</p>
+</div>
+
+<div style="text-align: center;">
+    <form method="POST" action="/etransfers-Mod">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required aria-required="true" aria-label="Email Address"> <br>
+
+            <label for="amount">Money Amount (without $)</label>
+            <input type="number" class="form-control" id="amount" name="amount" required min="1" aria-required="true" aria-label="Amount"> <br>
+
+            <label for="memoLine">Memo Line</label>
+            <input type="text" class="form-control" id="memoLine" name="memoLine" required aria-required="true" aria-label="Memo Line"> <br>
+        </div>
+
+        <!-- Add Bootstrap classes for button styling -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<br>
+
+<div style="text-align: center;">
+    <p>Delete Logic</p>
+    <p>/etransfers-Mod/{id}</p> <br>
+    <button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>

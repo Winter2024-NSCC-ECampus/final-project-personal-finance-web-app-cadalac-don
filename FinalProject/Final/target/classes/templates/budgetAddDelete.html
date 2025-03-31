@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planning</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<h1>Add or delete your budget memos!</h1>
+
+<div style="text-align: center;">
+<form method="POST" action="/budget-modify">
+    <div class="form-group">
+        <label for="futureExpense">Info Line</label>
+        <input type="text" class="form-control" id="futureExpense" name="futureExpense" required> <br>
+        <label for="futureCost">Money Amount without $</label>
+        <input type="number" class="form-control" id="futureCost" name="futureCost" required>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+<br><br>
+
+<div style="text-align: center;">
+    <p>Delete Logic</p>
+    <p>/budget-modify/{id}</p> <br>
+    <button type="submit" class="btn btn-primary"><a href="/" class="btn custom-btn">Home</a></button>
+</div>
+
+</body>
+
+</html>
